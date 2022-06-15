@@ -1,0 +1,358 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #9951E8;
+    color: #FFFFFF;
+}
+
+.main--screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    
+}
+.screen--info{
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.screen--info img{
+    margin-bottom: 50px;
+}
+
+.screen--info h1{
+    font-size: 30px;
+    text-align: center;  
+} 
+.screen--info h2{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 5px;    
+} 
+
+.screen--info .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.btnStyle{
+    position: relative;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.25em;
+    font-weight: 700;
+    padding: 10px 30px;
+    transition: 0.5s;
+    border: 2px solid var(--clr);
+    cursor: pointer;
+}
+.btnStyle:hover{
+    background-color: var(--clr);
+    color: #000000;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.btnStyle:before{
+    inset: 100%;
+    position: absolute;
+    background: #27282c;
+}
+
+.btnStyle i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.btnStyle i:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.btnStyle:hover i:before{
+    width: 20px;
+    left: 20%;
+}
+
+.btnStyle i:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: skewX(325deg);
+    transition: 0.5s;
+}
+
+.btnStyle:hover i:after{
+    width: 20px;
+    left: 80%;
+}
+
+.creat-account, .access-account{
+    position: relative;
+    margin: auto;
+    width: 400px;
+    height: auto;
+    text-transform: uppercase;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 5%;
+    padding: 30px 20px;
+    box-shadow: 
+    0 0 10px #0DDB0D;
+}
+
+.creat-account label{
+    display: block;
+    margin-bottom: 20px;
+}
+.access-account label{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.creat-account input{
+    width: 100%;
+    border:1px solid #999;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    outline: 0;
+}
+.access-account input{
+    width: 100%;
+    border:1px solid #999;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    outline: 0;
+}
+
+.creat-account h1,
+.access-account h1{
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.creat-account:hover h1,
+.access-account:hover h1{
+    color: rgba(0, 0, 0, 0);
+    transform: translateY(-20px);
+}
+
+.creat-account h1::before,
+.access-account h1::before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: -10px;
+    pointer-events: none;
+    z-index: 1;
+    font-size: 0.2em;
+    opacity: 0;
+    color: #0DDB0D;
+    letter-spacing: 20px;
+    transition: 0.5s;
+    text-shadow: 
+    0 0 10px #0DDB0D,
+    0 0 30px #0DDB0D,
+    0 0 70px #0DDB0D;
+}
+
+.creat-account:hover h1::before,
+.access-account:hover h1::before{
+    letter-spacing: 4px;
+    opacity: 1;
+    font-size: 1em;
+}
+
+.error{
+    font-size: 11px;
+    font-style: italic;
+    color: #F00;
+}
+
+.section-screens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.light-screen, .purple-screen{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.purple-screen{
+    background-color: #9951E8;
+    color: #FFFFFF;
+}
+
+.section--area:hover .interation{
+    text-shadow: 1px 1px 3px #0DDB0D;
+}
+
+.section--title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.section--title h1{
+    font-size: 40px;
+}
+
+.section--title h2{
+    font-size: 20px;
+}
+
+.section--body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.section--description{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 500px;
+    height: 200px;
+    justify-content: space-around;
+}
+
+.section--description .btnDesc{
+    font-size: 20px;
+}
+.img-exemple{
+    box-shadow: 0 0 10px 2px#0DDB0D;
+    border-radius: 50%;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #9951E8;
+}
+
+.sections--footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 30px;
+    color: #FFFFFF;
+}
+
+.sections--footer section{
+    border-right: 2px solid #0DDB0D;
+    border-left: 2px solid #0DDB0D;
+    min-width: 400px;
+    
+}
+
+.sections--footer section:first-child{
+    border-right: none;
+}
+.sections--footer section:last-child{
+    border-left: none;
+}
+
+.sections--footer .section--title{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sections--footer .section--body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+ .email{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.email span{
+    padding-left: 20px;
+}
+ .youtube{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.youtube span{
+    padding-left: 20px;
+}
+ .telegram{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.telegram span{
+    padding-left: 20px;
+}
+
+.our--products .section--body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright{
+    width: 100%;
+    background-color: #27282c;
+    color: #999;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.scrollButton{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+    text-align: center;
+    padding-top: 10px;
+}

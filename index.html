@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rede Social</title>
+</head>
+<body>
+    <div class="screen">
+        <main class="main--screen">
+            <div class="screen--info">
+                <h1>REDE SOCIAL FelleX</h1>
+                <h1>Venha fazer parte de nossos grupos de discussões<br></h1>
+                <h2>Cadastre-se ou faça seu login</h2>
+                <img src="images/logo.png" alt="FelleX">
+                <div class="buttons">
+                    <button class="signup btnStyle" style="--clr:#0DDB0D">Cadastre-se<i></i></button>
+                    <button class="login btnStyle" style="--clr:#0DDB0D">Login<i></i></button>
+                </div>
+            </div>
+            <div class="creat-account">
+                <h1 data-text="Crie sua conta">Crie sua conta</h1>
+                <form action="" method="get" class="signup--Validator">
+                    <label for="">
+                        Seu nome:<br>
+                        <input id="selected" type="text" name="name" data-rules="required|min=2|required-string">
+                    </label>
+                    <label for="">
+                        Seu e-mail:<br>
+                        <input type="text" name="email" data-rules="required|email">
+                    </label>
+                    <label for="">
+                        Sua senha:<br>
+                        <input type="password" name="password" data-rules="min=8">
+                    </label>
+                    <label for="">
+                        <input type="submit" value="Cadastrar">
+                    </label>
+                </form>
+            </div>
+            <div class="access-account">
+                <h1 data-text="Acesse sua conta">Acesse sua conta</h1>
+                <form action="home.html" method="get" class="login--Validator">
+                    <label for="">
+                        Seu e-mail:<br>
+                        <input id="selected" type="text" name="email" data-rules="required|email">
+                    </label>
+                    <label for="">
+                        Sua senha:<br>
+                        <input type="password" name="password" data-rules="min=8">
+                    </label>
+                    <label for="">
+                        <input type="submit" value="Acessar">
+                    </label>
+                </form>
+            </div> 
+        </main> 
+    </div>
+     <div class="section-screens"> 
+        <section class="light-screen">
+            <div class="section--area">
+                <div class="section--title">
+                    <h1>Grupos de Discussões</h1>
+                    <h2>Encontre um grupo que combine com você</h2>
+                </div>
+                <div class="section--body">
+                    <div class="section--description">
+                        <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?</div>
+                        <button class="btnDesc btnStyle" style="--clr:#0DDB0D">Saiba mais...<i></i></button>
+                    </div>
+                    <img src="images/foto-exemplo.png" alt="" srcset="" class="img-exemple">
+                </div>
+            </div>
+        </section>
+        <section class="purple-screen">
+            <div class="section--area">
+                <div class="section--title">
+                    <h1>Grupos Privados</h1>
+                    <h2>Crie seu grupo e chame seu amigos</h2>
+                </div>
+                <div class="section--body">
+                    <img src="images/foto-exemplo.png" alt="" srcset="" class="img-exemple">
+                    <div class="section--description">
+                        <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?</div>
+                        <button class="btnDesc btnStyle" style="--clr:#0DDB0D">Saiba mais...<i></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="light-screen">
+            <div class="section--area">
+                <div class="section--title">
+                    <h1>Instale Plugins</h1>
+                    <h2>Personalize seu perfil com temas e funcionalidades do seu gosto</h2>
+                </div>
+                <div class="section--body">
+                    <div class="section--description">
+                        <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?</div>
+                        <button class="btnDesc btnStyle" style="--clr:#0DDB0D">Saiba mais...<i></i></button>
+                    </div>
+                        <img src="images/foto-exemplo.png" alt="" srcset="" class="img-exemple">
+                </div>
+            </div>
+        </section>
+    </div> 
+
+    <img onclick="upScreen()" class="scrollButton" src="images/upload.png" alt="Arrow" srcset="">
+
+    <footer>
+        <div class="sections--footer">
+            <section class="social--medias">
+                <div class="section--title"><h1>Mídias Sociais</h1></div>
+                <div class="section--body">
+                    <div class="email">
+                        <img src="images/email.png" alt="">
+                        <span>emaildofellex@fellex.com</span>
+                    </div>
+                    <div class="youtube">
+                        <img src="images/youtube.png" alt="">
+                        <span> FelleX Oficial</span>
+                    </div>
+                    <div class="telegram">
+                        <img src="images/telegram.png" alt="">
+                        <span> +55 21 99999-9999</span>
+                    </div>
+                </div>
+            </section>
+            <section class="our--products">
+                <div class="section--title"><h1>Nossos Produtos</h1></div>
+                <div class="section--body">
+                    <div class="digital--products">
+                        <h2>Produtos Digitais</h2> <br>
+                        Plugins <br>
+                        Temas <br>
+                    </div>
+                    <div class="products">
+                        <h2>Produtos</h2> <br>
+                        Camisas <br>
+                        Canecas <br>
+                        acessórios
+                    </div>
+                </div>
+            </section>
+            <section class="about--us">
+                <div class="section--title"><h1>Sobre Nós</h1></div>
+                <div class="section--body">
+                    <div class="aboutUs--description">Somos a mais nova e promissora plataforma de interação entre pessoas de todo o mundo. Buscando sempre conectar e transmitir conhecimento para todos.</div>
+                </div>
+            </section>
+        </div>
+        <div class="copyright">
+            © Todos os direitos reservados - FelleX
+        </div>
+    </footer> 
+    <script src="script.js"></script>
+</body>
+</html>

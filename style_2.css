@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container-header {
+    /* position: fixed;
+    top: 0px;
+    left: 0px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color:#9951E8;
+    width: 100%;
+
+}
+
+.buttons-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    width: 300px;
+    /* background-color: antiquewhite; */
+}
+
+.btnHeader {
+    background-color: white;
+    color: black;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.landing-logo {
+    height: 40px;
+    width: 150px;
+    /* background-color: #3adb3a; */
+    background-color: #ADE5D8;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.landing-search {
+    font-size: 20px;
+    height: 40px;
+    width: 400px;
+    flex-shrink: 1;
+    background-color:white;
+    border-color: darkgray;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.landing-plugins {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    height: 40px;
+    width: 250px;
+    background-color:white;
+    border-color: darkgray;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.flex-container-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    height: 100vh;
+    width: 200px;
+    margin: 20px 0px 0px 20px;
+}
+
+.box-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    background-color: #9951E8;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.img-profile {
+    height: 80px;
+    width: 80px;
+    border-color: darkgray;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.box-groups {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    background-color: #9951E8;
+    border-radius: 10px;
+}
+
+.template-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 100px;
+    border-color: darkgray;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-grow: 1;
+    height: 100vh;
+    width: 450px;
+    /* border-color: black;
+    border-style: solid;
+    border-radius: 10px; */
+    margin: 20px 40px 0px 40px;
+}
+
+.box-publication {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    background-color: #9951E8;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+
+.publication-bar{
+    font-size: 20px;
+    width: 90%;
+    height: 35px;
+    border-color: darkgray;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.box-photo-video {
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 15px;
+    text-align: center;
+    border-color: darkgray;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.button-photo-video {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0DDB0D;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.text-landing {
+    margin-left: 20px;
+    color:rgb(178, 176, 176);
+}
+
+.button-publication{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+}
+
+.box-timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #9951E8;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.timeline-publication {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 30px);
+    height: auto;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 1px;
+    /* background-color: #0DDB0D; */
+    padding-top: 5px;
+}
+
+.publication-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    /* background-color: blue; */
+}
+.user-nickname {
+    margin-left: 10px;
+}
+
+.publication-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 40px);
+    height: auto;
+    margin-left: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 1px;
+    padding: 10px;
+    /* background-color:white; */
+}
+
+.publication-comment {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.publication-comment input{
+    width: 50px;
+    height: 50px;
+    margin: 10px 20px;
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 200px;
+    background-color: #9951E8;
+    border-radius: 10px;
+    margin: 20px 10px;
+}
+
+.box-friends {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.template-friend {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
