@@ -1,159 +1,217 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Rede Social</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Boostrap 5</title>
 </head>
 <body>
-    <div class="screen">
-        <main class="main--screen">
-            <div class="screen--info">
-                <h1>REDE SOCIAL FelleX</h1>
-                <h1>Venha fazer parte de nossos grupos de discussões<br></h1>
-                <h2>Cadastre-se ou faça seu login</h2>
-                <img src="images/logo.png" alt="FelleX">
-                <div class="buttons">
-                    <button class="signup btnStyle" style="--clr:#0DDB0D">Cadastre-se<i></i></button>
-                    <button class="login btnStyle" style="--clr:#0DDB0D">Login<i></i></button>
-                </div>
+    <div class="container">
+        <header class="fixed-top bg-gradient text-white d-flex align-items-center justify-content-between px-5">
+            <div class="start">
+                <div class="h1">Logo</div>
             </div>
-            <div class="creat-account">
-                <h1 data-text="Crie sua conta">Crie sua conta</h1>
-                <form action="" method="get" class="signup--Validator">
-                    <label for="">
-                        Seu nome:<br>
-                        <input id="selected" type="text" name="name" data-rules="required|min=2|required-string">
-                    </label>
-                    <label for="">
-                        Seu e-mail:<br>
-                        <input type="text" name="email" data-rules="required|email">
-                    </label>
-                    <label for="">
-                        Sua senha:<br>
-                        <input type="password" name="password" data-rules="min=8">
-                    </label>
-                    <label for="">
-                        <input type="submit" value="Cadastrar">
-                    </label>
-                </form>
+            <div class="end">
+                <button class="btn btn-lg text-uppercase fw-bolder" data-bs-target="#registered" data-bs-toggle="modal">Cadastros</button>
             </div>
-            <div class="access-account">
-                <h1 data-text="Acesse sua conta">Acesse sua conta</h1>
-                <form action="home.html" method="get" class="login--Validator">
-                    <label for="">
-                        Seu e-mail:<br>
-                        <input id="selected" type="text" name="email" data-rules="required|email">
-                    </label>
-                    <label for="">
-                        Sua senha:<br>
-                        <input type="password" name="password" data-rules="min=8">
-                    </label>
-                    <label for="">
-                        <input type="submit" value="Acessar">
-                    </label>
-                </form>
-            </div> 
-        </main> 
+        </header>
     </div>
-     <div class="section-screens"> 
-        <section class="light-screen">
-            <div class="section--area">
-                <div class="section--title">
-                    <h1>Grupos de Discussões</h1>
-                    <h2>Encontre um grupo que combine com você</h2>
-                </div>
-                <div class="section--body">
-                    <div class="section--description">
-                        <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?</div>
-                        <button class="btnDesc btnStyle" style="--clr:#0DDB0D">Saiba mais...<i></i></button>
-                    </div>
-                    <img src="images/foto-exemplo.png" alt="" srcset="" class="img-exemple">
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+        <main class="row main--screen">
+            <div class="col row">
+                <div class="col-sm text-center">
+                    <h1>Rede Social FelleX</h1>
                 </div>
             </div>
-        </section>
-        <section class="purple-screen">
-            <div class="section--area">
-                <div class="section--title">
-                    <h1>Grupos Privados</h1>
-                    <h2>Crie seu grupo e chame seu amigos</h2>
+            <div class="row">
+                <div class="col-sm text-center">
+                    <h5>Sua rede social do seu jeito</h5>
                 </div>
-                <div class="section--body">
-                    <img src="images/foto-exemplo.png" alt="" srcset="" class="img-exemple">
-                    <div class="section--description">
-                        <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?</div>
-                        <button class="btnDesc btnStyle" style="--clr:#0DDB0D">Saiba mais...<i></i></button>
+            </div>
+            <div class="row my-3 buttons">
+                <div class="col mb-2">
+                    <button class="btn text-uppercase fw-bold w-100" data-bs-toggle="modal" data-bs-target="#signup">Cadastre-se</button>
+                </div>
+                <div class="col">
+                    <button class="btn text-uppercase fw-bold w-100" data-bs-toggle="modal" data-bs-target="#signin">Login</button>
+                </div>
+            </div>
+            
+            <!-- Modal Cadastro -->
+            <div class="modal fade text-uppercase" id="signup" tabindex="-1" aria-labelledby="signup-label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="h1">Crie sua conta</div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="creat-account">
+                                <form method="get" class="form signup--Validator d-flex flex-column">
+                                    <label for="inputFirstName" class="form-label input-group-sm">
+                                        Nome Completo *<br>
+                                        <input id="name" class="form-control" type="text" name="firstName" data-rules="required|min=2|required-string" aria-label="Sizing example input">
+                                    </label>
+                                    <label for="" class="form-label input-group-sm">
+                                        Seu e-mail *<br>
+                                        <input type="text" id="email" class="form-control" name="email" data-rules="required|email">
+                                    </label>
+                                    <label for="" class="form-label input-group-sm">
+                                        Senha *<br>
+                                        <input id="password" class="form-control" type="password" name="password" data-rules="min=8">
+                                    </label>
+                                    <label for="" class="form-label input-group-sm">
+                                        Repita a senha *<br>
+                                        <input class="form-control" type="password" name="samePassword" data-rules="samePassword" id="samePassword">
+                                    </label>
+                                    <label for="" class="form-label">
+                                        <input class="btn btn-sm text-uppercase" type="submit" name="signup" value="Cadastrar"  onclick="cadastro.salvarCadastro()">
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-sm btn-close-modal text-uppercase" data-bs-dismiss="modal" onclick="clearModalSignup()">Sair</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="light-screen">
-            <div class="section--area">
-                <div class="section--title">
-                    <h1>Instale Plugins</h1>
-                    <h2>Personalize seu perfil com temas e funcionalidades do seu gosto</h2>
-                </div>
-                <div class="section--body">
-                    <div class="section--description">
-                        <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?</div>
-                        <button class="btnDesc btnStyle" style="--clr:#0DDB0D">Saiba mais...<i></i></button>
-                    </div>
-                        <img src="images/foto-exemplo.png" alt="" srcset="" class="img-exemple">
-                </div>
-            </div>
-        </section>
-    </div> 
 
-    <img onclick="upScreen()" class="scrollButton" src="images/upload.png" alt="Arrow" srcset="">
+            <!-- Modal Login -->
+            <div class="modal fade text-uppercase" id="signin" tabindex="-1" aria-labelledby="signin-label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="h1">Acesse sua conta</div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="access-account">
+                                <form action="" method="get" class="form signup--Validator d-flex flex-column">
+                                    <label for="" class="form-label">
+                                        Seu e-mail<br>
+                                        <input type="text" id="login-email" class="form-control" name="email">
+                                    </label>
+                                    <label for="" class="form-label">
+                                        Senha<br>
+                                        <input id="login-password" class="form-control" type="password" name="password">
+                                    </label>
+                                    <label for="" class="form-label">
+                                        <input class="btn text-uppercase" type="submit" value="Entrar">
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-bs-dismiss="modal" onclick="clearModalSignin()">Sair</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade text-uppercase" id="registered" tabindex="-1" aria-labelledby="signin-label" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="h1">Cadastrados</div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="registered-table">
+                                <table class="table table-striped">
+                                    <thead class="center table-active">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Nome</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Senha</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody" class="table-group-divider">
 
-    <footer>
-        <div class="sections--footer">
-            <section class="social--medias">
-                <div class="section--title"><h1>Mídias Sociais</h1></div>
-                <div class="section--body">
-                    <div class="email">
-                        <img src="images/email.png" alt="">
-                        <span>emaildofellex@fellex.com</span>
-                    </div>
-                    <div class="youtube">
-                        <img src="images/youtube.png" alt="">
-                        <span> FelleX Oficial</span>
-                    </div>
-                    <div class="telegram">
-                        <img src="images/telegram.png" alt="">
-                        <span> +55 21 99999-9999</span>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-bs-dismiss="modal">Sair</button>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <section class="our--products">
-                <div class="section--title"><h1>Nossos Produtos</h1></div>
-                <div class="section--body">
-                    <div class="digital--products">
-                        <h2>Produtos Digitais</h2> <br>
-                        Plugins <br>
-                        Temas <br>
+            </div>
+        </main>
+    </div>
+    <div class="row d-flex flex-column mx-0 section-screens"> 
+        <section class="col light-screen">
+            <div class="row section--area d-flex flex-column">
+                <div class="col section--title">
+                    <div class="h1 text-center">Grupos de Discussões</div>
+                    <div class="h4 text-center text-muted mx-2">Encontre um grupo que combine com você</div>
+                </div>
+                <div class="section--body mt-3">
+                    <div class="section--description">
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?
+                        </div>
+                        <div class="button my-3">
+                            <button class="btn btn-lg text-uppercase fw-bolder">Saiba mais...</button>
+                        </div>
                     </div>
-                    <div class="products">
-                        <h2>Produtos</h2> <br>
-                        Camisas <br>
-                        Canecas <br>
-                        acessórios
+                    <div class="img-fluid img-area">
+                        <img src="assets/images/photo-demo.jpg" class="rounded-circle photo-demo mb-2" alt="">
                     </div>
                 </div>
-            </section>
-            <section class="about--us">
-                <div class="section--title"><h1>Sobre Nós</h1></div>
-                <div class="section--body">
-                    <div class="aboutUs--description">Somos a mais nova e promissora plataforma de interação entre pessoas de todo o mundo. Buscando sempre conectar e transmitir conhecimento para todos.</div>
+            </div>
+        </section>
+        <section class="col purple-screen">
+            <div class="section--area d-flex flex-column">
+                <div class="section--title">
+                    <div class="h1 text-center text-white">Grupos Privados</div>
+                    <div class="h4 text-center text-white-50 mx-2">Crie seu grupo e chame seu amigos</div>
                 </div>
-            </section>
-        </div>
-        <div class="copyright">
-            © Todos os direitos reservados - FelleX
-        </div>
-    </footer> 
-    <script src="script.js"></script>
+                <div class="section--body mt-3">
+                    <div class="img-fluid img-area">
+                        <img src="assets/images/photo-demo.jpg" alt="" srcset="" class="rounded-circle photo-demo mb-2">
+                    </div>
+                    <div class="section--description">
+                        <div class="text-white desc">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?
+                        </div>
+                        <div class="button my-3">
+                            <button class="btn btn-lg text-uppercase fw-bolder">Saiba mais...</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="col light-screen">
+            <div class="section--area d-flex flex-column">
+                <div class="section--title">
+                    <div class="h1 text-center">Instale Plugins</div>
+                    <div class="h4 text-center text-muted mx-2">Personalize seu perfil com temas e funcionalidades do seu gosto</div>
+                </div>
+                <div class="section--body mt-3">
+                    <div class="section--description">
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?
+                        </div>
+                        <div class="button my-3">
+                            <button class="btn btn-lg text-uppercase fw-bolder">Saiba mais...</button>
+                        </div>
+                    </div>
+                    <div class="img-fluid img-area">
+                        <img src="assets/images/photo-demo.jpg" class="rounded-circle photo-demo mb-2" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/cadastro.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
