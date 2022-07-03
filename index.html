@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="container">
-        <header class="fixed-top bg-gradient text-white d-flex align-items-center justify-content-between px-5">
+        <header class="fixed-top bg-gradient text-white d-flex align-items-center justify-content-between px-5 border-bottom-purple">
             <div class="start">
                 <div class="h1">Logo</div>
             </div>
             <div class="end">
-                <button class="btn btn-lg text-uppercase fw-bolder" data-bs-target="#registered" data-bs-toggle="modal">Cadastros</button>
+                <button class="btn btn-lg text-uppercase fw-bolder px-5 py-3 ms-3" data-bs-target="#registered" data-bs-toggle="modal">Cadastros</button>
             </div>
         </header>
     </div>
@@ -33,10 +33,10 @@
             </div>
             <div class="row my-3 buttons">
                 <div class="col mb-2">
-                    <button class="btn text-uppercase fw-bold w-100" data-bs-toggle="modal" data-bs-target="#signup">Cadastre-se</button>
+                    <button class="btn btn-lg text-uppercase py-3 fw-bold w-100" data-bs-toggle="modal" data-bs-target="#signup">Cadastre-se</button>
                 </div>
                 <div class="col">
-                    <button class="btn text-uppercase fw-bold w-100" data-bs-toggle="modal" data-bs-target="#signin">Login</button>
+                    <button class="btn btn-lg text-uppercase py-3 fw-bold w-100" data-bs-toggle="modal" data-bs-target="#signin">Login</button>
                 </div>
             </div>
             
@@ -68,13 +68,21 @@
                                         <input class="form-control" type="password" name="samePassword" data-rules="samePassword" id="samePassword">
                                     </label>
                                     <label for="" class="form-label">
-                                        <input class="btn btn-sm text-uppercase" type="submit" name="signup" value="Cadastrar"  onclick="cadastro.salvarCadastro()">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">
+                                                Aceito os <a href="">termos</a> e <a href="">condições de serviços</a>.
+                                            </label>
+                                        </div>
+                                    </label>
+                                    <label for="" class="form-label">
+                                        <input class="btn btn-lg px-4 py-2 mt-3 text-uppercase" type="submit" name="signup" value="Cadastrar"  onclick="cadastro.salvarCadastro()">
                                     </label>
                                 </form>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-sm btn-close-modal text-uppercase" data-bs-dismiss="modal" onclick="clearModalSignup()">Sair</button>
+                            <button type="button" class="btn btn-lg btn-close-modal text-uppercase" data-bs-dismiss="modal" onclick="clearModalSignup()">Sair</button>
                         </div>
                     </div>
                 </div>
@@ -100,17 +108,27 @@
                                         <input id="login-password" class="form-control" type="password" name="password">
                                     </label>
                                     <label for="" class="form-label">
-                                        <input class="btn text-uppercase" type="submit" value="Entrar">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">
+                                                Permanecer conectado.
+                                            </label>
+                                        </div>
+                                    </label>
+                                    <label for="" class="form-label">
+                                        <input class="btn btn-lg px-5 py-2 mt-5 text-uppercase" type="submit" value="Entrar">
                                     </label>
                                 </form>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn" data-bs-dismiss="modal" onclick="clearModalSignin()">Sair</button>
+                            <button type="button" class="btn btn-lg px-5" data-bs-dismiss="modal" onclick="clearModalSignin()">Sair</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Modal  registered -->
             <div class="modal fade text-uppercase" id="registered" tabindex="-1" aria-labelledby="signin-label" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
@@ -156,7 +174,7 @@
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?
                         </div>
                         <div class="button my-3">
-                            <button class="btn btn-lg text-uppercase fw-bolder">Saiba mais...</button>
+                            <button class="btn btn-lg py-3 text-uppercase fw-bolder">Saiba mais...</button>
                         </div>
                     </div>
                     <div class="img-fluid img-area">
@@ -180,7 +198,7 @@
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?
                         </div>
                         <div class="button my-3">
-                            <button class="btn btn-lg text-uppercase fw-bolder">Saiba mais...</button>
+                            <button class="btn btn-lg py-3 text-uppercase fw-bolder">Saiba mais...</button>
                         </div> 
                     </div>
                 </div>
@@ -198,7 +216,7 @@
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, numquam consectetur! Cumque vero magni reiciendis voluptatum unde, veritatis repudiandae ut, repellendus ad qui nobis alias et exercitationem eos est impedit?
                         </div>
                         <div class="button my-3">
-                            <button class="btn btn-lg text-uppercase fw-bolder">Saiba mais...</button>
+                            <button class="btn btn-lg py-3 text-uppercase fw-bolder">Saiba mais...</button>
                         </div>
                     </div>
                     <div class="img-fluid img-area">

@@ -6,6 +6,7 @@
     /* Background colors setup */
 
     --bg-color-base: purple;
+    --bg-color-purple-light: rgb(221, 26, 221);
     --bg-color-white: white;
 
     /* Font sizes setup */
@@ -31,6 +32,21 @@
 header{
     height: 100px;
     background-color: var(--color-font-purple);
+}
+
+header .btn{
+    background-color: var(--bg-color-white);
+}
+
+header .btn:hover{
+    background-color: var(--bg-color-purple-light);
+}
+
+.border-bottom-purple{
+    border-bottom: 4px solid var(--color-font-purple);
+    box-shadow: 0 1px 3px var(--bg-color-purple-light);
+    box-shadow: 0 3px 7px var(--bg-color-purple-light);
+    box-shadow: 0 5px 15px var(--bg-color-purple-light);
 }
 
 .container-fluid{
