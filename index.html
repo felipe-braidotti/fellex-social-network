@@ -15,7 +15,7 @@
                 <div class="h1">Logo</div>
             </div>
             <div class="end">
-                <button class="btn btn-lg text-uppercase fw-bolder px-5 py-3 ms-3" data-bs-target="#registered" data-bs-toggle="modal">Cadastros</button>
+                <button id="register" class="btn btn-lg text-uppercase fw-bolder px-5 py-3 ms-3" data-bs-target="#registered" data-bs-toggle="modal">Cadastros</button>
             </div>
         </header>
     </div>
@@ -51,7 +51,7 @@
                         <div class="modal-body">
                             <div class="creat-account">
                                 <form method="get" class="form signup--Validator d-flex flex-column">
-                                    <label for="inputFirstName" class="form-label input-group-sm">
+                                    <label for="name" class="form-label input-group-sm">
                                         Nome Completo *<br>
                                         <input id="name" class="form-control" type="text" name="firstName" data-rules="required|min=2|required-string" aria-label="Sizing example input">
                                     </label>
@@ -69,8 +69,8 @@
                                     </label>
                                     <label for="" class="form-label">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="checkSignup">
+                                            <label class="form-check-label" for="checkSignup">
                                                 Aceito os <a href="">termos</a> e <a href="">condições de serviços</a>.
                                             </label>
                                         </div>
@@ -109,14 +109,14 @@
                                     </label>
                                     <label for="" class="form-label">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="checkLogin">
+                                            <label class="form-check-label" for="checkLogin">
                                                 Permanecer conectado.
                                             </label>
                                         </div>
                                     </label>
                                     <label for="" class="form-label">
-                                        <input class="btn btn-lg px-5 py-2 mt-5 text-uppercase" type="submit" value="Entrar">
+                                        <input id="btn-login" class="btn btn-lg px-5 py-2 mt-5 text-uppercase" type="submit" value="Entrar">
                                     </label>
                                 </form>
                             </div>

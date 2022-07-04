@@ -15,6 +15,7 @@ let signupValidator = {
         }
         
         if (send) {
+            alert('Cadastrado com sucesso!');
             document.querySelector('#name').value = '';
             document.querySelector('#email').value = '';
             document.querySelector('#password').value = '';
@@ -89,6 +90,39 @@ let signupValidator = {
 let form = document.querySelector(".signup--Validator");
 form.addEventListener('submit', signupValidator.handleSubmit)
 
+let login = document.querySelector('#btn-login');
+let loginValidate = login.addEventListener('click', (e) => {
+    e.preventDefault();
+    let id = cadastroJson.map(cadastro => cadastro.id);
+    let email = cadastroJson.map(cadastro => cadastro.email);
+    let password = cadastroJson.map(cadastro => cadastro.password);
+    
+    let pegarEmail = document.querySelector('#login-email').value;
+    let pegarPassword = document.querySelector('#login-password').value;
+
+    console.log(pegarEmail, pegarPassword)
+    for (let i = 0; i < id.length; i++) {
+        if (pegarEmail.length === 0 ) {
+            alert("Por favor, preencha o email.");
+            return false
+        }
+        if (pegarPassword.length === 0 ) {
+            alert("Por favor, preencha a senha.");
+            return false
+        }
+        if (pegarEmail === email[i]) {
+            if (pegarPassword == password[i]) {
+                alert('login efetuado')
+                return false
+            }
+        } 
+
+        if (pegarEmail !== email[i]) {
+            alert('');
+        }
+    }
+})
+  
 function clearModalSignup() {
     document.querySelector('#name').value = '';
     document.querySelector('#email').value = '';
@@ -189,7 +223,6 @@ class Cadastro {
         }
 
         if (status !== false) {
-            console.log('Existe campos sem preencher');
             return false;
         }
 

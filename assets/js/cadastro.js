@@ -1,4 +1,4 @@
-cadastroJSON = [
+let cadastroJson = [
     {
         id:1,
         Name:"Alexsander",
@@ -9,12 +9,12 @@ cadastroJSON = [
         id:2,
         Name:"Pedro",
         email:"pedro_silva.oficial@hotmail.com",
-        password:987654321
+        password:123123123
     },
     {
         id:3,
         Name:"Beatriz",
         email:"camargo_bea.oficial@gmail.com",
-        password:123456789
+        password:123123123
     }
 ]

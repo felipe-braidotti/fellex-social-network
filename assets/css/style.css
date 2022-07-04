@@ -38,6 +38,10 @@ header .btn{
     background-color: var(--bg-color-white);
 }
 
+#register{
+    display: none;
+}
+
 header .btn:hover{
     background-color: var(--bg-color-purple-light);
 }
@@ -130,9 +134,14 @@ header .btn:hover{
 
 
 @media (min-width:780px) and (max-width:1024px){
+    #register{
+        display: none;
+    }
+
     .section-screens .btn{
         width: 50%;
     }
+
     .section--area{
         margin: 0 100px;
     }
@@ -151,6 +160,10 @@ header .btn:hover{
 }
 
 @media (min-width:1025px) and (max-width:2048px) {
+    #register{
+        display: block;
+    }
+
     .section-screens .btn{
         width: 30%;
     }
