@@ -179,7 +179,7 @@ header .btn:hover{
 }
 
 /* ========== < Bloco - Tela Monitores > ========== */
-@media (min-width:1025px) and (max-width:1448px) {
+@media (min-width:1025px) and (max-width:1200px) {
     #register{
         display: block;
     }
@@ -248,9 +248,10 @@ header .btn:hover{
         justify-content: flex-end;
     }
 }
-@media (min-width:1448px) {
+@media (min-width:1200px) and (max-width:4100px) {
     .container-fluid{
-        width: 1450px;
+        width: 1200px;
+        overflow: hidden;
     }
 
     #register{
