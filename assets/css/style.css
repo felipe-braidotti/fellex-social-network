@@ -59,7 +59,7 @@ header .btn:hover{
 }
 
 .main--screen h1,
-.main--screen h5{
+.main--screen h3{
     color: var(--color-font-black);
     text-shadow: 1px 1px 1px var(--color-font-purple);
 }
