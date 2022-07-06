@@ -29,6 +29,8 @@
 
 }
 
+/* ========== < Bloco - Mobile-First > ========== */
+
 header{
     height: 100px;
     background-color: var(--color-font-purple);
@@ -98,8 +100,18 @@ header .btn:hover{
     box-shadow: 0 0 15px var(--bg-color-base);
 }
 
+.section-screens{
+    background-color: white;
+}
+
 .section-screens .btn{
     width: 100%;
+}
+
+.light-screen,
+.purple-screen{
+    display: flex;
+    align-items: center;
 }
 
 .purple-screen{
@@ -133,17 +145,24 @@ header .btn:hover{
 }
 
 
+/* ========== < Bloco - Tela Tablet > ========== */
 @media (min-width:780px) and (max-width:1024px){
     #register{
         display: none;
+    }
+
+    .section-screens{
+        background-color: white;
     }
 
     .section-screens .btn{
         width: 50%;
     }
 
-    .section--area{
-        margin: 0 100px;
+    .light-screen,
+    .purple-screen{
+        display: flex;
+        align-items: center;
     }
 
     .light-screen .button,
@@ -159,9 +178,93 @@ header .btn:hover{
     }
 }
 
-@media (min-width:1025px) and (max-width:2048px) {
+/* ========== < Bloco - Tela Monitores > ========== */
+@media (min-width:1025px) and (max-width:1448px) {
     #register{
         display: block;
+    }
+
+    .section-screens{
+        background-color: white;
+    }
+
+    .section-screens .btn{
+        width: 30%;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .photo-demo{
+        width: 200px;
+        height: auto;
+        display: block;
+        display: flex;
+    }
+
+    .section--body{
+        display: flex;
+    }
+
+    .light-screen,
+    .purple-screen{
+        display: flex;
+        align-items: center;
+    }
+
+    .light-screen .section--description{
+        width: 50%;
+    }
+
+    .img-area{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .light-screen .desc{
+        text-align: left;
+        
+    }
+
+    .purple-screen .section--description{
+        width: 50%;
+    }
+
+    .purple-screen .desc{
+        text-align: right;
+    }
+
+    .purple-screen .img-area{
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .purple-screen .button{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+@media (min-width:1448px) {
+    .container-fluid{
+        width: 1450px;
+    }
+
+    #register{
+        display: block;
+    }
+
+    .light-screen,
+    .purple-screen{
+        display: flex;
+        align-items: center;
+    }
+
+    .section-screens{
+        background-color: white;
     }
 
     .section-screens .btn{

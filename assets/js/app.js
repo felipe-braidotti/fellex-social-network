@@ -23,6 +23,7 @@ let signupValidator = {
             document.querySelector('#email').value = '';
             document.querySelector('#password').value = '';
             document.querySelector('#samePassword').value = '';
+            document.querySelector('#checkSignup').checked = false;
         }
     },// ===== <--Bloco--> handleSubmit =====
 
@@ -46,6 +47,12 @@ let signupValidator = {
                     case 'required':
                         if (input.value.trim() === '') {
                             return `Este campo não pode ser vazio.`;
+                        }
+                    break;
+                    case 'terms-required':
+                        let checkBox = document.querySelector('#checkSignup');
+                        if (!checkBox.checked) {
+                            return 'Aceite os termos de uso'
                         }
                     break;
                     //Precisa ter um mínimo especificado de caracteres para ser válido
@@ -142,12 +149,13 @@ let loginValidate = login.addEventListener('click', (e) => {
     }
 
     //Tratando a resposta do looping
-    if (encontrou) {
-        alert('login efetuado')
+    if (!encontrou) {
+        alert('Email ou senha incorreta');
     }else{
-        alert('Email ou senha incorreta')
+        window.location.href = "home.html";
     }
 })
+
 // =================== <--Bloco--> Tratativa de login ===================
 
 
