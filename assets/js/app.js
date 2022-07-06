@@ -49,6 +49,7 @@ let signupValidator = {
                             return `Este campo não pode ser vazio.`;
                         }
                     break;
+
                     case 'terms-required':
                         let checkBox = document.querySelector('#checkSignup');
                         if (!checkBox.checked) {
@@ -194,7 +195,7 @@ function clearModalSignin() {
 
 
 // =================== <--Bloco--> Armazenar cadastros na tabela ===================
-class Cadastro {//chamando a classe
+class Cadastro {//criando a classe
     // ==== <--Bloco--> Constructor ==== 
     // Usado para criar propriedades padrão dos objetos, onde todos os objetos da classe vão receber essas propriedades
     constructor() {
@@ -279,13 +280,13 @@ class Cadastro {//chamando a classe
     validator(cadastro){
         let status = false;
         if (cadastro.name == '') {
-            status += false;
+            status = false;
         }
         if (cadastro.email == '') {
-            status += false;
+            status = false;
         }
         if (cadastro.password == '') {
-            status += false;
+            status = false;
         }
 
         if (status !== false) {
@@ -297,4 +298,4 @@ class Cadastro {//chamando a classe
 }
 // ==== <--Bloco--> validator ==== 
 
-let cadastro = new Cadastro();//Criando/instanciando um novo objeto cadastro da classe Cadastro
+let cadastro = new Cadastro();//chamando a classe a um novo objeto
