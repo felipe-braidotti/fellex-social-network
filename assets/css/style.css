@@ -266,7 +266,7 @@ header .btn:hover{
     }
 }
 /* ========== < Bloco - Tela Monitores Gigantes/TVs > ========== */
-@media (min-width:1825px) and (max-width:2600px) {
+@media (min-width:1825px) and (max-width:2635px) {
     body{
         width: 80%;
         display: flex;
