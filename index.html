@@ -11,9 +11,17 @@
 <body>
     <!-- ========== < Bloco - Header > ========== -->
     <div class="container">
-        <header class="fixed-top bg-gradient text-white d-flex align-items-center justify-content-between px-5 border-bottom-purple">
+        <header class="position-fixed bg-gradient text-white d-flex align-items-center justify-content-between px-5 border-bottom-purple">
             <div class="start">
                 <div class="h1">Logo</div>
+            </div>
+            <div class="only-mobile-horizontal">
+                <div class="col-sm text-end">
+                    <h1>Rede Social FelleX</h1>
+                </div>
+                <div class="col-sm text-endr">
+                    <h3>Sua rede social do seu jeito</h3>
+                </div>
             </div>
             <div class="end">
                 <button id="register" class="btn btn-lg text-uppercase fw-bolder px-5 py-3 ms-3" data-bs-target="#registered" data-bs-toggle="modal">Cadastros</button>
@@ -27,12 +35,12 @@
         <main class="row main--screen">
             <!-- ========== < Blocos - Inicial > ========== -->
             <div class="col row">
-                <div class="col-sm text-center">
+                <div class="col-sm text-center display-none">
                     <h1>Rede Social FelleX</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm text-center">
+                <div class="col-sm text-center display-none">
                     <h3>Sua rede social do seu jeito</h3>
                 </div>
             </div>
@@ -172,9 +180,9 @@
 
 
     <!-- ========== < Bloco - Sessões > ========== -->
-    <div class="container-fluid row d-flex flex-column mx-auto section-screens"> 
+    <div class="row d-flex flex-column mx-1 section-screens"> 
         <!-- ========== < Bloco - Sessão 1 > ========== -->
-        <section class="col light-screen">
+        <section class="col light-screen justify-content-center">
             <div class="row section--area d-flex flex-column align-items-center">
                 <div class="col section--title">
                     <div class="h1 text-center">Grupos de Discussões</div>

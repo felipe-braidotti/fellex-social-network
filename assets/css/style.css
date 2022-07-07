@@ -32,8 +32,16 @@
 /* ========== < Bloco - Mobile-First > ========== */
 
 header{
+    width: 100%;
     height: 100px;
+    top: 0;
+    left: 0;
     background-color: var(--color-font-purple);
+
+}
+
+.only-mobile-horizontal{
+    display: none;
 }
 
 header .btn{
@@ -151,6 +159,10 @@ header .btn:hover{
         display: none;
     }
 
+    .only-mobile-horizontal{
+        display: none;
+    }
+
     .section-screens{
         background-color: white;
     }
@@ -179,9 +191,14 @@ header .btn:hover{
 }
 
 /* ========== < Bloco - Tela Monitores > ========== */
-@media (min-width:1025px) and (max-width:1200px) {
+@media (min-width:1024px) and (max-width:1824px) {
+    
     #register{
         display: block;
+    }
+
+    .only-mobile-horizontal{
+        display: none;
     }
 
     .section-screens{
@@ -191,12 +208,12 @@ header .btn:hover{
     .section-screens .btn{
         width: 30%;
     }
-
+    
     .buttons{
         display: flex;
         flex-direction: row;
     }
-
+    
     .photo-demo{
         width: 200px;
         height: auto;
@@ -217,13 +234,13 @@ header .btn:hover{
     .light-screen .section--description{
         width: 50%;
     }
-
+    
     .img-area{
         width: 50%;
         display: flex;
         justify-content: flex-end;
     }
-
+    
     .light-screen .desc{
         text-align: left;
         
@@ -236,7 +253,7 @@ header .btn:hover{
     .purple-screen .desc{
         text-align: right;
     }
-
+    
     .purple-screen .img-area{
         width: 50%;
         display: flex;
@@ -248,48 +265,45 @@ header .btn:hover{
         justify-content: flex-end;
     }
 }
-@media (min-width:1200px) and (max-width:4100px) {
-    .container-fluid{
-        width: 1200px;
-        overflow: hidden;
-    }
-
-    #register{
-        display: block;
-    }
-
-    .light-screen,
-    .purple-screen{
+/* ========== < Bloco - Tela Monitores Gigantes/TVs > ========== */
+@media (min-width:1825px) and (max-width:2600px) {
+    body{
+        width: 80%;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        margin: auto;
     }
 
-    .section-screens{
-        background-color: white;
-    }
-
-    .section-screens .btn{
-        width: 30%;
-    }
-
-    .buttons{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .photo-demo{
-        width: 200px;
-        height: auto;
-        display: block;
-        display: flex;
+    .only-mobile-horizontal{
+        display: none;
     }
 
     .section--body{
         display: flex;
     }
 
-    .light-screen .section--description{
-        width: 50%;
+    .purple-screen .img-area{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .section-screens{
+        width: 100%;
+    }
+
+    .section--area{
+        margin: 0 auto;
+    }
+    
+    #register{
+        display: block;
+    }
+    
+    .photo-demo{
+        width: 200px;
+        height: auto;
+        display: block;
     }
 
     .img-area{
@@ -298,27 +312,73 @@ header .btn:hover{
         justify-content: flex-end;
     }
 
-    .light-screen .desc{
-        text-align: left;
-        
+    .section--description{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
+    .section--description .desc{
+        text-align: start;
+    }
+
+    .section--description .btn{
+        width: 300px;
+    }
+    
     .purple-screen .section--description{
         width: 50%;
-    }
-
-    .purple-screen .desc{
-        text-align: right;
-    }
-
-    .purple-screen .img-area{
-        width: 50%;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
-    .purple-screen .button{
-        display: flex;
-        justify-content: flex-end;
+    .purple-screen .section--description .desc{
+        text-align: end;
     }
+
+    .purple-screen .section--description .btn{
+        width: 300px;
+    }
+    
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-height: 250px) and (max-height:450px) {
+    .only-mobile-horizontal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .end{
+        display: none;
+    }
+    
+    .main--screen{
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    .display-none{
+        display: none;
+    }
+
+
+    .buttons{
+        margin-top: 0 !important;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+    }
+
 }
