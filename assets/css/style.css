@@ -1,0 +1,384 @@
+:root{
+    /* Fonts setup*/
+
+    --main-font: 'Arial';
+
+    /* Background colors setup */
+
+    --bg-color-base: purple;
+    --bg-color-purple-light: rgb(221, 26, 221);
+    --bg-color-white: white;
+
+    /* Font sizes setup */
+
+    --font-tiny: 10px;
+    --font-small: 12px;
+    --font-middle: 20px;
+    --font-large: 25px;
+    --font-x-large: 35px;
+
+    /* Font colors setup */
+
+    --color-font-black: black;
+    --color-font-white: white;
+    --color-font-light-grey: #EEEEEE;
+    --color-font-grey: grey;
+    --color-font-dark-grey: #3A3A3A;
+    --color-font-purple: purple;
+
+
+}
+
+/* ========== < Bloco - Mobile-First > ========== */
+
+header{
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: var(--color-font-purple);
+
+}
+
+.only-mobile-horizontal{
+    display: none;
+}
+
+header .btn{
+    background-color: var(--bg-color-white);
+}
+
+#register{
+    display: none;
+}
+
+header .btn:hover{
+    background-color: var(--bg-color-purple-light);
+}
+
+.border-bottom-purple{
+    border-bottom: 4px solid var(--color-font-purple);
+    box-shadow: 0 1px 3px var(--bg-color-purple-light);
+    box-shadow: 0 3px 7px var(--bg-color-purple-light);
+    box-shadow: 0 5px 15px var(--bg-color-purple-light);
+}
+
+.container-fluid{
+    height: 100vh;
+    background-color: var(--color-font-light-grey);
+}
+
+.main--screen h1,
+.main--screen h3{
+    color: var(--color-font-black);
+    text-shadow: 1px 1px 1px var(--color-font-purple);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    background-color: var(--bg-color-white);
+    color: var(--color-font-black);
+    border: 1px solid var(--color-font-black);
+    font-size: var(--font-small);
+}
+
+.btn:hover{
+    background-color: var(--color-font-purple);
+    color: var(--color-font-white);
+    border: 1px solid var(--color-font-black);
+}
+
+.btn-close-modal{
+    width: 100px;
+}
+
+.error{
+    font-size: 11px;
+    font-style: italic;
+    color: #F00;
+}
+
+.modal-content{
+    box-shadow: 0 0 5px var(--bg-color-base);
+    box-shadow: 0 0 10px var(--bg-color-base);
+    box-shadow: 0 0 15px var(--bg-color-base);
+}
+
+.section-screens{
+    background-color: white;
+}
+
+.section-screens .btn{
+    width: 100%;
+}
+
+.light-screen,
+.purple-screen{
+    display: flex;
+    align-items: center;
+}
+
+.purple-screen{
+    background-color: var(--color-font-purple);
+}
+
+.purple-screen .btn:hover{
+    background-color: rgb(195, 19, 195);
+}
+
+.h1{
+    margin-top: 10px;
+}
+
+.photo-demo{
+    display: none;
+}
+
+.light-screen .desc,
+.purple-screen .desc{
+    text-align: center;
+    
+}
+
+.center {
+    text-align: center;
+}
+
+.table-active{
+    background-color: var(--color-font-purple);
+}
+
+
+/* ========== < Bloco - Tela Tablet > ========== */
+@media (min-width:780px) and (max-width:1024px){
+    #register{
+        display: none;
+    }
+
+    .only-mobile-horizontal{
+        display: none;
+    }
+
+    .section-screens{
+        background-color: white;
+    }
+
+    .section-screens .btn{
+        width: 50%;
+    }
+
+    .light-screen,
+    .purple-screen{
+        display: flex;
+        align-items: center;
+    }
+
+    .light-screen .button,
+    .purple-screen .button
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* ========== < Bloco - Tela Monitores > ========== */
+@media (min-width:1024px) and (max-width:1824px) {
+    
+    #register{
+        display: block;
+    }
+
+    .only-mobile-horizontal{
+        display: none;
+    }
+
+    .section-screens{
+        background-color: white;
+    }
+
+    .section-screens .btn{
+        width: 30%;
+    }
+    
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .photo-demo{
+        width: 200px;
+        height: auto;
+        display: block;
+        display: flex;
+    }
+
+    .section--body{
+        display: flex;
+    }
+
+    .light-screen,
+    .purple-screen{
+        display: flex;
+        align-items: center;
+    }
+
+    .light-screen .section--description{
+        width: 50%;
+    }
+    
+    .img-area{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .light-screen .desc{
+        text-align: left;
+        
+    }
+
+    .purple-screen .section--description{
+        width: 50%;
+    }
+
+    .purple-screen .desc{
+        text-align: right;
+    }
+    
+    .purple-screen .img-area{
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .purple-screen .button{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+/* ========== < Bloco - Tela Monitores Gigantes/TVs > ========== */
+@media (min-width:1825px) and (max-width:2635px) {
+    body{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .only-mobile-horizontal{
+        display: none;
+    }
+
+    .section--body{
+        display: flex;
+    }
+
+    .purple-screen .img-area{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .section-screens{
+        width: 100%;
+    }
+
+    .section--area{
+        margin: 0 auto;
+    }
+    
+    #register{
+        display: block;
+    }
+    
+    .photo-demo{
+        width: 200px;
+        height: auto;
+        display: block;
+    }
+
+    .img-area{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .section--description{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section--description .desc{
+        text-align: start;
+    }
+
+    .section--description .btn{
+        width: 300px;
+    }
+    
+    .purple-screen .section--description{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .purple-screen .section--description .desc{
+        text-align: end;
+    }
+
+    .purple-screen .section--description .btn{
+        width: 300px;
+    }
+    
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-height: 250px) and (max-height:450px) {
+    .only-mobile-horizontal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .end{
+        display: none;
+    }
+    
+    .main--screen{
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    .display-none{
+        display: none;
+    }
+
+
+    .buttons{
+        margin-top: 0 !important;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+    }
+
+}
