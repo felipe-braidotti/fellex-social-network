@@ -64,7 +64,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="creat-account">
-                                <form method="get" class="form signup--Validator d-flex flex-column">
+                                <form method="post" class="form signup--Validator d-flex flex-column">
                                     <label for="name" class="form-label input-group-sm">
                                         Nome Completo *<br>
                                         <input id="name" class="form-control" type="text" name="firstName" data-rules="required|min=2|required-string" aria-label="Sizing example input">
@@ -90,7 +90,7 @@
                                         </div>
                                     </label>
                                     <label for="" class="form-label">
-                                        <input class="btn btn-lg px-4 py-2 mt-3 text-uppercase" type="submit" name="signup" value="Cadastrar"  onclick="cadastro.salvarCadastro()">
+                                        <input class="btn btn-lg px-4 py-2 mt-3 text-uppercase" type="submit" name="signup" id="signup" value="Cadastrar"  onclick="cadastro.salvarCadastro()">
                                     </label>
                                 </form>
                             </div>

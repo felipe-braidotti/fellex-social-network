@@ -18,7 +18,6 @@ let signupValidator = {
         }
         
         if (send) {
-            alert('Cadastrado com sucesso!');
             document.querySelector('#name').value = '';
             document.querySelector('#email').value = '';
             document.querySelector('#password').value = '';
@@ -304,3 +303,50 @@ class Cadastro {//criando a classe
 // ==== <--Bloco--> validator ==== 
 
 let cadastro = new Cadastro();//chamando a classe a um novo objeto
+
+
+// ==== <--Bloco--> Enviando para o BD ====
+
+const init = () => {
+    const cadastroBD = document.querySelector('#signup')
+    cadastroBD.addEventListener('click', cadastroSubmit)
+}
+
+
+
+const cadastroSubmit = (e) => {
+    e.preventDefault()
+
+    const data = accessData()
+    const url = "http://localhost:3000"
+
+    if(!data) {
+        return
+    }
+
+    fetch(`${url}/signup`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "same-origin"
+        })
+        .then((response) => {
+            alert("Cadastro realizado com sucesso!")
+        })
+        .catch((e) => {
+            return console.error(e)
+        })
+
+}
+
+const accessData = () => {
+    return { 
+        "name": document.getElementById("name").value,
+        "email": document.getElementById("email").value,
+        "password": document.getElementById("password").value
+    }
+}
+
+init()
